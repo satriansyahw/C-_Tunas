@@ -17,6 +17,7 @@ namespace NetChallenge
         private string formid = "form_id_";
         private string processid1 = "";
         private string processid2 = "";
+
         #region Imports
         [DllImport("user32.dll")]
         public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
@@ -33,6 +34,7 @@ namespace NetChallenge
         public MainForm(string formid)
         {
             InitializeComponent();
+
             this.formid = this.formid + formid;
             this.Text = this.formid;
             //this.processid1 = this.formid + "_1";
@@ -69,14 +71,30 @@ namespace NetChallenge
             SendMessage(notepadTextbox, WM_SETTEXT, 0, textBoxA.Text);
 
 
-            SendKeys.SendWait("^(s)");
-           
+
+
+            if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9)
+            {
+                // Determine whether the keystroke is a number from the keypad.
+                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9)
+                {
+                    // Determine whether the keystroke is a backspace.
+                    if (e.KeyCode != Keys.Back)
+                    {
+                        // A non-numerical keystroke was pressed.
+                        // Set the flag to true and evaluate in KeyPress event.
+                        nonNumberEntered = true;
+                    }
+                }
+            }
+            //SendKeys.SendWait("^(s)");
+
             //  string  output  = p.StandardOutput.ReadToEnd();
             // MessageBox.Show(output);
             //p.Kill();
             //p.WaitForExit();
             //p.Dispose();
-       
+
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
