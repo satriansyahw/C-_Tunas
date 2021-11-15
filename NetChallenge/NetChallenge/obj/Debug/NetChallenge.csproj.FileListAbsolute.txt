@@ -1,0 +1,11 @@
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\bin\Debug\NetChallenge.exe.config
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\bin\Debug\NetChallenge.exe
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\bin\Debug\NetChallenge.pdb
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.csproj.AssemblyReference.cache
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.Properties.Resources.resources
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.csproj.GenerateResource.cache
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.csproj.CoreCompileInputs.cache
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.exe
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.pdb
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.Form1.resources
+C:\Users\satriamilan\source\repos\NetChallenge\NetChallenge\obj\Debug\NetChallenge.MainForm.resources
