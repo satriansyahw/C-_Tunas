@@ -13,6 +13,9 @@ A simple program in Winform application
 1. Download and installl Runtime Dotnet framewokr 4.8
 2. Visual Studio 2019 Community
 
+## Contents
+C#, WinForm,DataBinding,Events,KeySender,File IO & Process Management
+
 ## Logs
 ![image](https://user-images.githubusercontent.com/20899978/141983099-322b0d8c-311b-40b9-aa7a-f5d889c708cf.png)
 
