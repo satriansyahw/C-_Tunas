@@ -15,3 +15,7 @@ A simple program in Winform application
 
 ## Logs
 ![image](https://user-images.githubusercontent.com/20899978/141983099-322b0d8c-311b-40b9-aa7a-f5d889c708cf.png)
+
+## Run On Visual Studio
+Open the project in Visual studio and click Start
+To test multiple instance, Go to the execution folder, and run NetChallenge for multiple times
