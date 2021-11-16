@@ -89,6 +89,7 @@ namespace NetChallenge
             this.btnKeySender.TabIndex = 6;
             this.btnKeySender.Text = "btnKeySender";
             this.btnKeySender.UseVisualStyleBackColor = true;
+            this.btnKeySender.Click += new System.EventHandler(this.btnKeySender_Click);
             // 
             // Form1
             // 
