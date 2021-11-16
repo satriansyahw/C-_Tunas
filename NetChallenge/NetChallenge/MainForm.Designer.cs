@@ -58,7 +58,6 @@ namespace NetChallenge
             this.textBoxA.Name = "textBoxA";
             this.textBoxA.Size = new System.Drawing.Size(100, 20);
             this.textBoxA.TabIndex = 6;
-            this.textBoxA.TextChanged += new System.EventHandler(this.textBoxA_TextChanged);
             // 
             // label2
             // 
@@ -77,7 +76,7 @@ namespace NetChallenge
             this.button1.TabIndex = 9;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // MainForm
             // 
@@ -91,7 +90,7 @@ namespace NetChallenge
             this.Controls.Add(this.label2);
             this.Name = "MainForm";
             this.Text = "s";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            //this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

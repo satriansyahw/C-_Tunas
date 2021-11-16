@@ -1,4 +1,5 @@
 ﻿using NetChallenge.Class;
+using NetChallenge.ProcessManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,33 +16,38 @@ namespace NetChallenge
     {
         private int formid = 0;
         private TextBoxData boxData = new TextBoxData();
+        private string processId = string.Empty;
+        private string processId1 = string.Empty;
+        private string processId2 = string.Empty;
+        private NotepadProcessing notepadProcessing = new NotepadProcessing();
         public Form1()
         {
             InitializeComponent();
             addTextboxBinding();
+            generateProcessIdAndNotepadInstances();
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             formid++;
-            MainForm mform = new MainForm(formid.ToString());
-            mform.Show();
-            this.Hide();
+            //MainForm mform = new MainForm(formid.ToString());
+           // mform.Show();
+            //his.Hide();
         }
 
-        private void clickTextBoxA_Click(object sender, EventArgs e)
-        {
-            //boxData.TextBoxB = boxData.TextBoxA;
-        }
-
-        private void clickTextBoxB_Click(object sender, EventArgs e)
-        {
-            //boxData.TextBoxA = boxData.TextBoxB;
-        }
         private void addTextboxBinding()
         {
             textBoxA.DataBindings.Add("Text", boxData, "TextBoxA", false, DataSourceUpdateMode.OnPropertyChanged);
             textBoxB.DataBindings.Add("Text", boxData, "TextBoxB", false, DataSourceUpdateMode.OnPropertyChanged);
+        }
+        private void generateProcessIdAndNotepadInstances()
+        {
+            processId = DateTime.Now.ToString("yyyyMMddhhmmss") + Guid.NewGuid();
+            processId1 += notepadProcessing.generateProcessNotepad().Id.ToString();
+            processId2 += notepadProcessing.generateProcessNotepad().Id.ToString();
+
         }
     }
 }
