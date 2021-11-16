@@ -35,6 +35,8 @@ namespace NetChallenge
         {
             InitializeComponent();
 
+            this.KeyPreview = true;
+            this.KeyDown += MainForm_KeyDown;
             this.formid = this.formid + formid;
             this.Text = this.formid;
             //this.processid1 = this.formid + "_1";
@@ -59,6 +61,16 @@ namespace NetChallenge
 
         }
 
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)       // Ctrl-S Save
+            {
+                // Do what you want here
+                e.SuppressKeyPress = true;  // Stops other controls on the form receiving event.
+                MessageBox.Show("save");
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Process[] local = Process.GetProcessesByName("notepad");
@@ -73,21 +85,8 @@ namespace NetChallenge
 
 
 
-            if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9)
-            {
-                // Determine whether the keystroke is a number from the keypad.
-                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9)
-                {
-                    // Determine whether the keystroke is a backspace.
-                    if (e.KeyCode != Keys.Back)
-                    {
-                        // A non-numerical keystroke was pressed.
-                        // Set the flag to true and evaluate in KeyPress event.
-                        nonNumberEntered = true;
-                    }
-                }
-            }
-            //SendKeys.SendWait("^(s)");
+           
+            SendKeys.SendWait("^(s)");
 
             //  string  output  = p.StandardOutput.ReadToEnd();
             // MessageBox.Show(output);
